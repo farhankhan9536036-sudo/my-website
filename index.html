@@ -1,47 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farhan Multi-Language Website</title>
-    <link rel="stylesheet" href="style.css">
-
-    <!-- GOOGLE TRANSLATE -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,hi,ar,fr,de,es,ur,tr,bn,pa,ta,te,ml,gu,kn,ja,zh-CN,zh-TW,ko,ru,it,pt,pl,sv,no,fi,nl,cs,ro,el,he,id,ms,th,vi,uk,bg,hr,sk,sl,da,hu',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-    </script>
-
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Farhan Web — Home</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<!-- Google Translate (kept lightweight) -->
+<script>
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({pageLanguage:'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'gt_translate');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
+<body class="theme-light">
+<header class="topbar">
+  <div class="brand"><a href="index.html">Farhan Web</a></div>
+  <div class="nav-controls">
+    <div id="gt_translate" class="translate-box" aria-hidden="false"></div>
+    <button id="menuBtn" class="hamburger" aria-label="Open menu">☰</button>
+  </div>
+  <nav id="mainNav" class="main-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">Dark</button>
+  </nav>
+</header>
 
+<section class="hero hero-upgrade">
+  <div class="hero-inner">
+    <h1>Welcome to Farhan’s Multi-Language Website</h1>
+    <p class="lead">Professional websites • 100+ languages • SEO-ready</p>
+    <div class="hero-cta">
+      <a class="btn primary" href="services.html">Explore Services</a>
+      <a class="btn ghost" href="#contact">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="cards container">
+    <article class="card">
+      <h3>Website Design</h3>
+      <p>Modern responsive layouts, performance focused.</p>
+    </article>
+    <article class="card">
+      <h3>Multi-language Integration</h3>
+      <p>Google Translate & API-ready for production solutions.</p>
+    </article>
+    <article class="card">
+      <h3>SEO & Speed</h3>
+      <p>Meta, OG tags & optimized images for fast loading.</p>
+    </article>
+  </section>
+
+  <section class="about container">
+    <div class="split">
+      <div><h2>About Me</h2><p>I'm Farhan Khan — I build modern multilingual websites that look professional on any device.</p></div>
+      <div class="profile-card"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=60" alt="Profile"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact container">
+    <h2>Contact</h2>
+    <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="form-grid">
+        <input name="name" placeholder="Your Name" required />
+        <input name="email" type="email" placeholder="Email Address" required />
+      </div>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <div class="form-actions">
+        <button class="btn primary" type="submit">Send Message</button>
+      </div>
+    </form>
+    <p class="small">Tip: Replace Formspree action with your endpoint (or ask me to set up free backend).</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">© <span id="year"></span> Farhan Web • Built with ❤️</div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+// Mobile nav toggle
+const menuBtn = document.getElementById('menuBtn'), nav = document.getElementById('mainNav');
+menuBtn.addEventListener('click', ()=> nav.classList.toggle('open'));
+// Theme toggle
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', ()=>{
+  document.body.classList.toggle('theme-dark');
+  document.body.classList.toggle('theme-light');
+  themeToggle.textContent = document.body.classList.contains('theme-dark') ? 'Light' : 'Dark';
+});
+</script>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Farhan Web — Minimal</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
 <body>
+<header class="bar">
+ <div class="wrap"><a class="logo" href="index.html">Farhan Web</a>
+ <nav class="nav"><a href="index.html" class="active">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav></div>
+</header>
 
-    <header>
-        <h1 class="logo">Farhan Web</h1>
+<section class="hero-min">
+  <div class="wrap">
+    <h1>Build. Translate. Launch.</h1>
+    <p class="sub">Minimal design, maximum focus. Translate in 100+ languages.</p>
+    <a href="services.html" class="btn">Our Services</a>
+  </div>
+</section>
 
-        <!-- Language Dropdown -->
-        <div id="google_translate_element"></div>
+<main class="wrap">
+  <section class="grid">
+    <div class="panel"><h3>Design</h3><p>Clean, minimal user interfaces.</p></div>
+    <div class="panel"><h3>Translate</h3><p>Google Translate integration available.</p></div>
+    <div class="panel"><h3>Support</h3><p>Deployment and hosting guidance.</p></div>
+  </section>
+</main>
 
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+<footer class="footer wrap">© Farhan Web</footer>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Farhan — Agency</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="agency">
+<header class="ag-header">
+  <div class="container">
+    <a class="logo" href="index.html">Farhan</a>
+    <nav class="ag-nav"><a href="index.html" class="active">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
 
-    <section class="hero">
-        <h2>Welcome to Farhan’s Multi-Language Website</h2>
-        <p>Translate this website in 100+ languages</p>
-        <a href="services.html" class="btn">Explore Services</a>
-    </section>
+<section class="ag-hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <h1>Design & Translate for Global Audiences</h1>
+      <p>Premium websites, multilingual reach, measurable growth.</p>
+      <div class="actions">
+        <a class="btn primary" href="services.html">Get Started</a>
+        <a class="btn outline" href="contact.html">Request Quote</a>
+      </div>
+    </div>
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000&q=60" alt="hero"></div>
+  </div>
+</section>
 
+<main class="container">
+  <section class="ag-cards">
+    <div class="ag-card">
+      <h3>Strategy</h3><p>Research-driven approach to global product launches.</p>
+    </div>
+    <div class="ag-card">
+      <h3>Design</h3><p>Brand-led visual systems that convert.</p>
+    </div>
+    <div class="ag-card">
+      <h3>Translate</h3><p>100+ languages, localization-ready strategy.</p>
+    </div>
+  </section>
+
+  <section class="testimonial">
+    <blockquote>"Farhan delivered a world-class website for our product launch." — Client</blockquote>
+  </section>
+</main>
+
+<footer class="ag-footer">
+  <div class="container">© Farhan • Follow: <a href="#">Twitter</a> • <a href="#">LinkedIn</a></div>
+</footer>
 </body>
 </html>
